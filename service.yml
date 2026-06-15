@@ -5,7 +5,7 @@ metadata:
   name: todo-service
 
 spec:
-  type: LoadBalancer
+  type: NodePort
 
   selector:
     app: todo-app-project
