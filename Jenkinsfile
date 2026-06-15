@@ -39,7 +39,9 @@ pipeline {
                subject: "Deployment Failed",
                body: "Check Jenkins console logs."
            )
-       }
 
-    }
-}
+        }
+     
+    } 
+  
+  }  
