@@ -26,12 +26,20 @@ pipeline {
     post {
 
         success {
-            echo 'Deployment Successful'
+            emailext(
+                to: "sivpriya0830@gmail.com",
+                subject: "Deployment Successful",
+                body: "Your CI/CD pipeline completed successfully."
+            )
         }
 
         failure {
-            echo 'Deployment Failed'
-        }
+           emailext(
+               to: "sivpriya0830@gmail.com",
+               subject: "Deployment Failed",
+               body: "Check Jenkins console logs."
+           )
+       }
 
     }
 }
