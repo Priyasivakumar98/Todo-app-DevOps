@@ -27,18 +27,19 @@ pipeline {
 
         success {
             emailext(
-                to: "sivpriya0830@gmail.com",
-                subject: "Deployment Successful",
-                body: "Your CI/CD pipeline completed successfully."
+                subject: 'Deployment Successful',
+                body: 'Your CI/CD pipeline completed successfully.',
+                to: 'sivpriya0830@gmail.com'                        
             )
+
         }
 
         failure {
            emailext(
-               to: "sivpriya0830@gmail.com",
-               subject: "Deployment Failed",
-               body: "Check Jenkins console logs."
-           )
+               subject: 'Deployment Failed',
+               body: 'Check Jenkins console logs.',
+               to: 'sivpriya0830@gmail.com'
+            )
 
         }
      
